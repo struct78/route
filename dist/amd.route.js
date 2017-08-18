@@ -308,7 +308,7 @@ function go(path, title, shouldReplace) {
   // Server-side usage: directly execute handlers for the path
   if (!hist) { return central[TRIGGER]('emit', getPathFromBase(path)) }
 
-  path = base + normalize(path);
+  path = base + path;
   title = title || doc.title;
   // browsers ignores the second parameter `title`
   shouldReplace
